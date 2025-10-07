@@ -22,7 +22,8 @@ Output: [0,1]
 
 #“Difficulty: Easy”
 def twoSum(self, nums, target):
-    for i in range(len(nums)): #tutulan degerleri donguye alip indeksleri dolasiriz( range(len(nums)) ). Baska bir yol : bos bir dic oluşturmak. 
-        for j in range(i+1,len(nums)):#range(basla,dur) lens(nums) = dahil degil !!
+    for i in range(len(nums)): #We take the saved values in a loop and go through the indexes.( range(len(nums)) ).Another way to do this is create an empty dic 
+        for j in range(i+1,len(nums)):#range(start,stop) ->lens(nums) = Not included !!
             if(nums[i]+nums[j] == target): 
                 return[i,j]
+
