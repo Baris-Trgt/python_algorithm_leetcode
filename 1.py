@@ -15,21 +15,14 @@ Output: [1,2]
 Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
-
-Constraints:
-
-2 <= nums.length <= 104
--109 <= nums[i] <= 109
--109 <= target <= 109
-Only one valid answer exists.
 '''
-
 #type nums: List[int]
 #type target: int
 #rtype: List[int]
 
+#“Difficulty: Easy”
 def twoSum(self, nums, target):
-    for i in range(len(nums)):
-        for j in range(i+1,len(nums)):
-            if(nums[i]+nums[j] == target):
+    for i in range(len(nums)): #tutulan degerleri donguye alip indeksleri dolasiriz( range(len(nums)) ). Baska bir yol : bos bir dic oluşturmak. 
+        for j in range(i+1,len(nums)):#range(basla,dur) lens(nums) = dahil degil !!
+            if(nums[i]+nums[j] == target): 
                 return[i,j]
